@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GSAP Transition Pack</title>
+	<!-- Bootstrap CSS -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+			<style type="text/css" media="screen">
+				body {
+					background-color: #1E1E20;
+				}
+				.particle {
+					border-radius: 180px;
+					width: 90px;
+					height: 90px;
+					font-family: "arial", sans-serif;
+					position: absolute;
+					visibility: hidden;
+				}
+				.star {
+					width: 20px;
+					height: 20px;
+					background-color: #f1c40f !important;
+					border-radius: 20px;
+					font-family: "arial", sans-serif;
+					position: absolute;
+					visibility: hidden;
+				}
+				.troll {
+					width: 60px;
+					height: 60px;
+					background-color: transparent !important;
+					background-image: url('http://atomlab.co.uk/images/uploads/troll-trim.png');
+					border-radius: 60px;
+					font-family: "arial", sans-serif;
+					position: absolute;
+					visibility: hidden;
+					background-position: center;
+					background-repeat: no-repeat;
+					-webkit-background-size: contain;
+					background-size: contain;
+				}
+				.ani-text {
+					color: #ffffff;
+					font-family: Arial, sans-serif;
+					font-size:40px;
+					position: relative;
+					display: inline-block;
+					float:left;
+					width: 20%;
+					text-align: center;
+					padding-right: 50px;
+					text-align: center;
+				}
+				.ani-text2 {
+					color: #dddddd;
+					font-family: Arial, sans-serif;
+					font-size:40px;
+					position: relative;
+					display: inline-block;
+					float:left;
+					width: 20%;
+					text-align: center;
+					padding-right: 50px;
+					text-align: center;
+				}
+				.center {
+					position: absolute;
+					top: 40%;
+					text-align: center;
+					width: 100%;
+					transform: translateY(-50%);
+				}
+				.center-2 {
+					top: 60%;
+				}
+			</style>
+		</head>
+		<body>
+		<div class="center">
+			<h1 class="ani-text">Spaced 1</h1>
+			<h1 class="ani-text">Spaced 2</h1>
+			<h1 class="ani-text">Spaced 3</h1>
+			<h1 class="ani-text">Spaced 4</h1>
+			<h1 class="ani-text">Spaced 5</h1>
+		</div>
+		<div class="center-2">
+			<h1 class="ani-text2">Spaced 1</h1>
+			<h1 class="ani-text2">Spaced 2</h1>
+			<h1 class="ani-text2">Spaced 3</h1>
+			<h1 class="ani-text2">Spaced 4</h1>
+			<h1 class="ani-text2">Spaced 5</h1>
+		</div>
+			<!-- jQuery -->
+			<script src="//code.jquery.com/jquery.js"></script>
+			<!-- Bootstrap JavaScript -->
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="gsui.js"></script>
+			<script type="text/javascript" charset="utf-8">
+				$(document).ready(function() {
+					gsui('slideInDownBig', $('.ani-text'), {delay:0.5});
+					gsui('stagger.zoomOut', $('.ani-text2'), {delay:1});
+					gsui('stagger.shake', $('.ani-text'), {delay:0.5});
+					gsui('stagger.zoomOut', $('.ani-text'), {delay:0.5});
+					gsui('zoomIn', $('.ani-text'), {delay:0.5});
+
+
+
+				});
+			</script>
+		</body>
+		</html>
