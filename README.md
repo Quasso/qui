@@ -1,4 +1,4 @@
-**GSAP UI pack**
+# **GSAP UI pack** #
 
 ### What is this repository for? ###
 
@@ -19,4 +19,4 @@
 
 ### Who do I talk to? ###
 
-* Me! 
+* Me!
