@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GSAP Transition Pack</title>
 	<!-- Bootstrap CSS -->
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -59,6 +58,7 @@
 					text-align: center;
 					padding-right: 50px;
 					text-align: center;
+					box-sizing: border-box;
 				}
 				.ani-text2 {
 					color: #dddddd;
@@ -68,9 +68,11 @@
 					display: inline-block;
 					float:left;
 					width: 20%;
+
 					text-align: center;
 					padding-right: 50px;
 					text-align: center;
+
 				}
 				.center {
 					position: absolute;
@@ -79,40 +81,44 @@
 					width: 100%;
 					transform: translateY(-50%);
 				}
-				.center-2 {
-					top: 60%;
+				.timer {
+					background-color: black;
+					padding: 1em;
+					font-size: 20px;
+					color: white;
 				}
+
 			</style>
 		</head>
 		<body>
-		<div class="center">
-			<h1 class="ani-text">Spaced 1</h1>
-			<h1 class="ani-text">Spaced 2</h1>
-			<h1 class="ani-text">Spaced 3</h1>
-			<h1 class="ani-text">Spaced 4</h1>
-			<h1 class="ani-text">Spaced 5</h1>
-		</div>
-		<div class="center-2">
-			<h1 class="ani-text2">Spaced 1</h1>
-			<h1 class="ani-text2">Spaced 2</h1>
-			<h1 class="ani-text2">Spaced 3</h1>
-			<h1 class="ani-text2">Spaced 4</h1>
-			<h1 class="ani-text2">Spaced 5</h1>
-		</div>
+		<p class="timer"></p>
+		<div class="btn"></div>
+			<div class="center">
+				<h1 class="ani-text">GSAP</h1>
+				<h1 class="ani-text">UI</h1>
+				<h1 class="ani-text">PACK</h1>
+				<h1 class="ani-text">JS</h1>
+				<h1 class="ani-text">LIB</h1>
+			</div>
+
 			<!-- jQuery -->
 			<script src="//code.jquery.com/jquery.js"></script>
 			<!-- Bootstrap JavaScript -->
-			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
 			<script src="gsui.js"></script>
 			<script type="text/javascript" charset="utf-8">
+				var start = new Date;
+				setInterval(function() {
+					$('.timer').text((new Date - start) / 1000 + "s");
+				}, 99);
+			
 				$(document).ready(function() {
-					gsui('slideInDownBig', $('.ani-text'), {delay:0.5});
-					gsui('stagger.zoomOut', $('.ani-text2'), {delay:1});
+					
 					gsui('stagger.shake', $('.ani-text'), {delay:0.5});
 					gsui('stagger.zoomOut', $('.ani-text'), {delay:0.5});
+					gsui('stagger.slideInLeftBig', $('.ani-text'), {delay:0.5});
 					gsui('zoomIn', $('.ani-text'), {delay:0.5});
-
+					gsui('stagger.tada', $('.ani-text'), {delay:0.5});
 
 
 				});

@@ -22,7 +22,11 @@ var gsui = function(method, element, options, callback) {
 		setTimeout(function() {gsui(method, element, options, callback)},100);
 	}
 	else {
+		
+		console.log('doasodoasdo');
 		$el.addClass('gsui-active');
+		// Style reset to prevent unwanted styles persisting between transitions
+		
 		var 
 		method = (typeof arguments[0] !== "function")? arguments[0] : {},
 		element = (typeof arguments[0] !== "function")? arguments[1] : {},
@@ -160,8 +164,8 @@ var gsui = function(method, element, options, callback) {
 		checkProgress($el, element);
 		break;
 		case 'stagger.slideInLeftBig':
-		animate.staggerFrom( 
-			element, duration, {delay: delay, left: "-=" + bigPx + "px", opacity: 0, ease:easing}, stagger
+		animate.staggerFromTo( 
+			element, duration, {left: "-=" + bigPx + "px", opacity: 0}, {delay: delay, left: "0px", opacity: 1, ease:easing}, stagger
 			);
 		checkProgress($el, element);
 
@@ -174,7 +178,7 @@ var gsui = function(method, element, options, callback) {
 		break;
 		case 'stagger.slideOutLeftBig':
 		animate.staggerTo( 
-			element, duration, {delay: delay, left: "-=" + bigPx + "px", opacity: 0, ease:easing}, stagger
+			element, duration, {delay: delay, left: "-" + bigPx + "px", opacity: 0, ease:easing}, {left: "0", opacity: 1}, stagger
 			);
 		checkProgress($el, element);
 		break;
@@ -264,9 +268,11 @@ var gsui = function(method, element, options, callback) {
 		break;
 		case 'stagger.tada':
 		// duration=duration*5;
+	
 		element.each(function(index,element){
 			// This effectively allows the user to set a 
 			// stagger time for sequences with multiple tweens
+			
 			setTimeout(function() {
 				animate.to( element, duration/5, {scale: 0.6})
 				.to( 
@@ -284,7 +290,6 @@ var gsui = function(method, element, options, callback) {
 		checkProgress($el, element);
 		break;
 		case 'stagger.shake':
-		var count2;
 		element.each(function(index,element){
 			setTimeout(function() {
 				animate.to( element, duration/6, {x: (nudge/2), ease:easing})
@@ -315,10 +320,17 @@ function customParams(options) {
 }
 function animationComplete($el) {
 	$el.removeClass('gsui-active');
+	$el.attr('style','');
 }
+var calc;
 function checkProgress($el, element) {
+	calc = duration + stagger;
+	calc = calc*1000;
+	calc = (calc * element.length)-(delay*1000);
+	console.log(calc-delay);
+	console.log(calc);
 	setTimeout(function() {
-		$el.removeClass('gsui-active');
-	}, element.length*(duration+stagger+delay*1000)+1);
+		animationComplete($el);
+	}, calc);
 }
 }
