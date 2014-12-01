@@ -16,37 +16,6 @@
 				body {
 					background-color: #1E1E20;
 				}
-				.particle {
-					border-radius: 180px;
-					width: 90px;
-					height: 90px;
-					font-family: "arial", sans-serif;
-					position: absolute;
-					visibility: hidden;
-				}
-				.star {
-					width: 20px;
-					height: 20px;
-					background-color: #f1c40f !important;
-					border-radius: 20px;
-					font-family: "arial", sans-serif;
-					position: absolute;
-					visibility: hidden;
-				}
-				.troll {
-					width: 60px;
-					height: 60px;
-					background-color: transparent !important;
-					background-image: url('http://atomlab.co.uk/images/uploads/troll-trim.png');
-					border-radius: 60px;
-					font-family: "arial", sans-serif;
-					position: absolute;
-					visibility: hidden;
-					background-position: center;
-					background-repeat: no-repeat;
-					-webkit-background-size: contain;
-					background-size: contain;
-				}
 				.ani-text {
 					color: #ffffff;
 					font-family: Arial, sans-serif;
@@ -56,23 +25,9 @@
 					float:left;
 					width: 20%;
 					text-align: center;
-					padding-right: 50px;
 					text-align: center;
 					box-sizing: border-box;
-				}
-				.ani-text2 {
-					color: #dddddd;
-					font-family: Arial, sans-serif;
-					font-size:40px;
-					position: relative;
-					display: inline-block;
-					float:left;
-					width: 20%;
-
-					text-align: center;
-					padding-right: 50px;
-					text-align: center;
-
+					transition: color 1s;
 				}
 				.center {
 					position: absolute;
@@ -87,12 +42,9 @@
 					font-size: 20px;
 					color: white;
 				}
-
 			</style>
 		</head>
 		<body>
-			<p class="timer"></p>
-			<div class="btn"></div>
 			<div class="center">
 				<h1 class="ani-text">GSAP</h1>
 				<h1 class="ani-text">UI</h1>
@@ -100,29 +52,20 @@
 				<h1 class="ani-text">JS</h1>
 				<h1 class="ani-text">LIB</h1>
 			</div>
-
 			<!-- jQuery -->
 			<script src="//code.jquery.com/jquery.js"></script>
 			<!-- Bootstrap JavaScript -->
 			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
 			<script src="gsui.js"></script>
 			<script type="text/javascript" charset="utf-8">
-				
-
 				$(document).ready(function() {
-					
-					// gsui('stagger.shake', $('.ani-text'));
-					gsui('stagger.shake', $('.ani-text'), {delay: 3}, function() {console.log('bossing it');});
-					// gsui('zoomOut', $('.ani-text'));
-					// gsui('slideInLeftBig', $('.ani-text'));
-					// gsui('zoomIn', $('.ani-text'),{duration:2});
-					// gsui('stagger.tada', $('.ani-text'));
-					// gsui('zoomOut', $('.ani-text'));
-					// gsui('slideInLeft', $('.ani-text'));
-
-
-
-
+					gsui('zoomIn', $('.ani-text'), {repeat:2});
+					gsui('slideInLeftBig', $('.ani-text'));
+					gsui('zoomIn', $('.ani-text'),{duration:0.2, delay:0.5, repeat: 4});
+					gsui('stagger.tada', $('.ani-text'));
+					gsui('zoomOut', $('.ani-text'));
+					gsui('slideInLeft', $('.ani-text'));
+					gsui('stagger.shake', $('.ani-text'), {delay: 3}, function() {$('.ani-text').css('color','blue');});
 				});
 			</script>
 		</body>
