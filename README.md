@@ -13,7 +13,7 @@
 
 ### Contribution guidelines ###
 
-* Have you any great ideas for a preset? 
+* Any ideas for presets
 * Any ideas for features
 * Ideas for improving performance
 
