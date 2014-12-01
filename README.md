@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* Ever used Velocity.js? Love its UI capabilities? This is an attempt to replicate those quick transitions and shortcuts for the considerably faster GSAP. 
+* Ever used Velocity.js? Love its UI capabilities? This is an attempt to replicate those quick transitions and shortcuts for the considerably faster GSAP. Also GSAP is backwards compatible to IE6.
 * 1.0a
 
 ### How do I get set up? ###
@@ -17,6 +17,4 @@
 * Any ideas for features
 * Ideas for improving performance
 
-### Who do I talk to? ###
-
-* Me!
+If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I hope it helps somebody else!
