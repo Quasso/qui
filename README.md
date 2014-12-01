@@ -17,4 +17,4 @@
 * Any ideas for features
 * Ideas for improving performance
 
-If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I hope it helps somebody else!
+If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I will periodically update it though as I enhance the script and discover bugs. I hope it helps somebody else!
