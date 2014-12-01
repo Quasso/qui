@@ -107,18 +107,15 @@
 			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
 			<script src="gsui.js"></script>
 			<script type="text/javascript" charset="utf-8">
-				// var start = new Date;
-				// setInterval(function() {
-				// 	$('.timer').text((new Date - start) / 1000 + "s");
-				// }, 99);
+				
 			
 				$(document).ready(function() {
 					
-					gsui('stagger.shake', $('.ani-text'), {delay:0.5});
-					gsui('stagger.zoomOut', $('.ani-text'), {delay:0.5});
-					gsui('stagger.slideInLeftBig', $('.ani-text'), {delay:0.5});
-					gsui('zoomIn', $('.ani-text'), {delay:0.5});
-					gsui('stagger.tada', $('.ani-text'), {delay:0.5});
+					gsui('stagger.shake', $('.ani-text'));
+					gsui('zoomOut', $('.ani-text'), {delay:1.5});
+					// gsui('slideInLeftBig', $('.ani-text'));
+					// gsui('zoomIn', $('.ani-text'));
+					gsui('tada', $('.ani-text'));
 
 
 				});

@@ -9,7 +9,8 @@ delay = defaultDelay = 0,
 easing = defaultEasing = "Linear.easeNone",
 stagger = defaultStagger = 0.3,
 repeat = defaultRepeat = 2,
-count = defaultCount = 0, done=false;
+count = defaultCount = 0, done=false,
+calc;
 var gsui = function(method, element, options, callback) {
 	$el = $(element);
 	// This simple class adding/removing system allows animations to be chained
@@ -132,8 +133,8 @@ var gsui = function(method, element, options, callback) {
 			);
 		break;
 		case 'tada':
-		animate.from(element, duration/6, {scale: 0.6}).to( 
-			element, duration/6, {rotation: "10%", scale: 1.1, ease:easing}
+		animate.from(element, duration/6, {scale: 0.6,opacity:0}).to( 
+			element, duration/6, {rotation: "10%", scale: 1.1, ease:easing, opacity: 1}
 			).to( 
 			element, duration/6, {rotation: "-10%", scale: 1.15, ease:easing}
 			).to( 
@@ -290,6 +291,7 @@ var gsui = function(method, element, options, callback) {
 		checkProgress($el, element);
 		break;
 		case 'stagger.shake':
+
 		element.each(function(index,element){
 			setTimeout(function() {
 				animate.to( element, duration/6, {x: (nudge/2), ease:easing})
@@ -298,7 +300,7 @@ var gsui = function(method, element, options, callback) {
 				.to(element, duration/6, {x: "-=" + nudge, ease:easing})
 				.to(element, duration/6, {x: "+=" + nudge, ease:easing})
 				.to( element, duration/6, {x: "0", ease:easing});
-				console.log(index*stagger*1000);
+				
 			}, index*stagger*1000);
 		});
 		checkProgress($el, element);
@@ -323,18 +325,16 @@ function animationComplete($el) {
 	$el.removeClass('gsui-active');
 	$el.css('transform','none');
 }
-var calc;
+
 setInterval(function() {
 	$('.timer').text(animate.totalDuration());
 }, 99);
 function checkProgress($el, element) {
-	calc = duration + stagger;
-	calc = calc*1000;
-	calc = (calc * element.length)-(delay*2000);
-	console.log(calc-delay);
+	calc = (duration * element.length) * 1000 + (delay*1000);
 	console.log(calc);
+	
 	setTimeout(function() {
 		animationComplete($el);
-	}, calc);
+	}, calc+50);
 }
 }
