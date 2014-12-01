@@ -23,17 +23,16 @@ var gsui = function(method, element, options, callback) {
 		setTimeout(function() {gsui(method, element, options, callback)},100);
 	}
 	else {
-		
 		console.log('doasodoasdo');
 		$el.addClass('gsui-active');
 		// Style reset to prevent unwanted styles persisting between transitions
-		
 		var 
 		method = (typeof arguments[0] !== "function")? arguments[0] : {},
 		element = (typeof arguments[0] !== "function")? arguments[1] : {},
 		options = (typeof arguments[0] !== "function")? arguments[2] : {},
 		callback = (typeof arguments[0] !== "function")? arguments[3] : arguments[0];
 		animate = new TimelineLite();
+		resetParams();
 		if(typeof(options) != "undefined")
 			customParams(options);
 		switch (method) {
@@ -151,7 +150,6 @@ var gsui = function(method, element, options, callback) {
 			.to(element, duration/2, {x: "-=" + nudge, ease:easing, repeat:1})
 			.to(element, duration/2, {x: "+=" + nudge, ease:easing, repeat:1})
 			.to( element, duration/2, {x: "0", ease:easing, onComplete: function() { animationComplete($el)}});
-			
 			break;
 		/**************************
 		STAGGERED - for arrays of 
@@ -169,7 +167,6 @@ var gsui = function(method, element, options, callback) {
 			element, duration, {left: "-=" + bigPx + "px", opacity: 0}, {delay: delay, left: "0px", opacity: 1, ease:easing}, stagger
 			);
 		checkProgress($el, element);
-
 		break;
 		case 'stagger.slideOutLeft':
 		animate.staggerTo( 
@@ -269,11 +266,9 @@ var gsui = function(method, element, options, callback) {
 		break;
 		case 'stagger.tada':
 		// duration=duration*5;
-
 		element.each(function(index,element){
 			// This effectively allows the user to set a 
 			// stagger time for sequences with multiple tweens
-			
 			setTimeout(function() {
 				animate.to( element, duration/5, {scale: 0.6})
 				.to( 
@@ -291,7 +286,6 @@ var gsui = function(method, element, options, callback) {
 		checkProgress($el, element);
 		break;
 		case 'stagger.shake':
-
 		element.each(function(index,element){
 			setTimeout(function() {
 				animate.to( element, duration/6, {x: (nudge/2), ease:easing})
@@ -300,7 +294,6 @@ var gsui = function(method, element, options, callback) {
 				.to(element, duration/6, {x: "-=" + nudge, ease:easing})
 				.to(element, duration/6, {x: "+=" + nudge, ease:easing})
 				.to( element, duration/6, {x: "0", ease:easing});
-				
 			}, index*stagger*1000);
 		});
 		checkProgress($el, element);
@@ -311,6 +304,7 @@ var gsui = function(method, element, options, callback) {
 	}
 }
 function customParams(options) {
+
 	duration = defaultDuration, 
 	delay = defaultDelay,
 	easing = defaultEasing,
@@ -321,18 +315,23 @@ function customParams(options) {
 	if(typeof(options.easing) != "undefined") easing = options.easing;
 	if(typeof(options.stagger) != "undefined") stagger = options.stagger;
 }
+function resetParams() {
+	duration = defaultDuration, 
+	delay = defaultDelay,
+	easing = defaultEasing,
+	stagger = defaultStagger,
+	done=false;
+}
 function animationComplete($el) {
 	$el.removeClass('gsui-active');
 	$el.css('transform','none');
 }
-
 setInterval(function() {
 	$('.timer').text(animate.totalDuration());
 }, 99);
 function checkProgress($el, element) {
 	calc = (duration * element.length) * 1000 + (delay*1000);
 	console.log(calc);
-	
 	setTimeout(function() {
 		animationComplete($el);
 	}, calc+50);
