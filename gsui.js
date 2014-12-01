@@ -123,7 +123,7 @@ var gsui = function(method, element, options, callback) {
 		break;
 		case 'zoomIn':
 		animate.fromTo( 
-			element, duration, {delay: delay, scale: "0", opacity: 0, ease:easing}, {scale: "1", opacity: 1}, stagger
+			element, duration, {delay: delay, scale: "0", opacity: 0, ease:easing}, {scale: "1", opacity: 1, onComplete: function() { animationComplete($el)}}, stagger
 			);
 		break;
 		case 'zoomOut':
@@ -268,7 +268,7 @@ var gsui = function(method, element, options, callback) {
 		break;
 		case 'stagger.tada':
 		// duration=duration*5;
-	
+
 		element.each(function(index,element){
 			// This effectively allows the user to set a 
 			// stagger time for sequences with multiple tweens
@@ -298,6 +298,7 @@ var gsui = function(method, element, options, callback) {
 				.to(element, duration/6, {x: "-=" + nudge, ease:easing})
 				.to(element, duration/6, {x: "+=" + nudge, ease:easing})
 				.to( element, duration/6, {x: "0", ease:easing});
+				console.log(index*stagger*1000);
 			}, index*stagger*1000);
 		});
 		checkProgress($el, element);
@@ -320,13 +321,16 @@ function customParams(options) {
 }
 function animationComplete($el) {
 	$el.removeClass('gsui-active');
-	$el.attr('style','');
+	$el.css('transform','none');
 }
 var calc;
+setInterval(function() {
+	$('.timer').text(animate.totalDuration());
+}, 99);
 function checkProgress($el, element) {
 	calc = duration + stagger;
 	calc = calc*1000;
-	calc = (calc * element.length)-(delay*1000);
+	calc = (calc * element.length)-(delay*2000);
 	console.log(calc-delay);
 	console.log(calc);
 	setTimeout(function() {
