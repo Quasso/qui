@@ -6,7 +6,7 @@
 var $ = jQuery.noConflict();
 // Timelines for animations
 var animate;
-// Distanceshahaha
+// Distances
 var smallPx=50, bigPx= 500, nudge=10;
 // Timing variables & defaults
 var 
