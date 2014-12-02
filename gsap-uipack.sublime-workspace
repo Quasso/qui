@@ -1,0 +1,1059 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"h",
+				"hash	URLUtils"
+			],
+			[
+				"window",
+				"window.history	Window"
+			],
+			[
+				"set",
+				"setHash"
+			],
+			[
+				"show",
+				"showSection"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"static",
+				"staticBottom"
+			],
+			[
+				"has",
+				"hasClass	.hasClass()"
+			],
+			[
+				"$in",
+				"$invisible"
+			],
+			[
+				"toggle",
+				"toggleSection"
+			],
+			[
+				"inv",
+				"invisibleTop"
+			],
+			[
+				"cur",
+				"currentScroll"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"header",
+				"header_height"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"prev",
+				"previousScroll"
+			],
+			[
+				"refer",
+				"referral_form"
+			],
+			[
+				"re",
+				"referral_form"
+			],
+			[
+				"refe",
+				"referral_form"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"social",
+				"social_width"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"out",
+				"output_track"
+			],
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"spotify",
+				"spotify_embed"
+			],
+			[
+				"res",
+				"responsive_viewport"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"attr",
+				"attribute"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"wind",
+				"window_height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"hea",
+				"header_size"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-repeat"
+			],
+			[
+				"smoo",
+				"smoothScroll"
+			],
+			[
+				"sec",
+				"sec2_bottom"
+			],
+			[
+				"splas",
+				"splash_bottom"
+			],
+			[
+				"secti",
+				"section_3"
+			],
+			[
+				"head",
+				"header_height"
+			],
+			[
+				"resp",
+				"responsive_viewport_2"
+			],
+			[
+				"Eve",
+				"EventDates"
+			],
+			[
+				"date",
+				"datepicker"
+			],
+			[
+				"high",
+				"highlightDays"
+			],
+			[
+				"eo-",
+				"eo-grey"
+			],
+			[
+				"eo",
+				"eo-grey"
+			],
+			[
+				"eog",
+				"eo-green"
+			],
+			[
+				"event",
+				"event_header"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"curr",
+				"currentSection"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*global $el:true */\n/*global TimelineLite */\n/*global console */\n/*jshint -W079 */\n/*jslint latedef:false*/\nvar $ = jQuery.noConflict();\n// Timelines for animations\nvar animate;\n// Distances\nvar smallPx=50, bigPx= 500, nudge=10;\n// Timing variables & defaults\nvar \nduration, delay, easing, stagger, calc, cb, count=0;\nvar \ndefaultDuration = 0.5, defaultDelay = 0, defaultEasing = \"Linear.easeNone\", defaultStagger = 0.3;\n// Element/s that is/are being animated\n$el=\"\";\nfunction resetParams() {\n	duration = defaultDuration; \n	delay = defaultDelay;\n	easing = defaultEasing;\n	stagger = defaultStagger;\n}\nfunction animationComplete($el) {\n	$el.removeClass('gsui-active');\n	$el.css('transform','none');\n	if(typeof(cb)!==\"undefined\") {\n		cb();\n	}\n}\nfunction checkProgress($el, element) {\n	calc = (duration * element.length) * 1000 + (delay*1000);\n	console.log(calc);\n	setTimeout(function() {\n		animationComplete($el);\n	}, calc+50);\n}\nvar gsui = function(method, element, options, callback) {\n	$el = $(element);\n	// This simple class adding/removing system allows animations to be chained\n	// on elements/groups of elements very easily without the need for manually\n	// calculating a delay. It also means the delay parameter always functions as \n	// expected, if you chain ui animations on an element, it'll only start when the \n	// first finished if the second has a delay, it will honour that delay \n	// after the first element has finished too\n	if($el.hasClass('gsui-active')) {\n		setTimeout(function() {gsui(method, element, options, callback);},100);\n	}\n	else {\n		$el.addClass('gsui-active');\n		cb = callback;\n		animate = new TimelineLite();\n		resetParams();\n		if(typeof(options) !== \"undefined\")\n		{\n			if(count<options.repeat-1) {\n				gsui(method, element, options, callback);\n				count++;\n			}\n				\n				customParams(options);\n		}\n		console.log(duration);\n		switch (method) {\n		/**************************\n		UNIFIED - for arrays of \n		elements to be animated \n		simultaneously \n		**************************/\n		case 'slideInLeft':\n		animate.fromTo( \n			element, duration, {delay: delay, left: \"-=\" + smallPx + \"px\", opacity: 0}, {delay: delay, left: \"0px\", opacity: 1, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInLeftBig':\n		animate.from( \n			element, duration, {delay: delay, left: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutLeft':\n		animate.to( \n			element, duration, {delay: delay, left: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutLeftBig':\n		animate.to( \n			element, duration, {delay: delay, left: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInRight':\n		animate.from( \n			element, duration, {delay: delay, left: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInRightBig':\n		animate.from( \n			element, duration, {delay: delay, left: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutRight':\n		animate.to( \n			element, duration, {delay: delay, left: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutRightBig':\n		animate.to( \n			element, duration, {delay: delay, left: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInUp':\n		animate.from( \n			element, duration, {delay: delay, top: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInUpBig':\n		animate.from( \n			element, duration, {delay: delay, top: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutUp':\n		animate.to( \n			element, duration, {delay: delay, top: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing}\n			);\n		break;\n		case 'slideOutUpBig':		\n		animate.to( \n			element, duration, {delay: delay, top: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInDown':		\n		animate.from( \n			element, duration, {delay: delay, top: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideInDownBig':\n		animate.from( \n			element, duration, {delay: delay, top: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutDown':\n		animate.to( \n			element, duration, {delay: delay, top: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'slideOutDownBig':\n		animate.to( \n			element, duration, {delay: delay, top: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'zoomIn':\n		animate.fromTo( \n			element, duration, {scale: \"0\", opacity: 0}, {scale: \"1\", opacity: 1,delay: delay, ease:easing, onComplete: function() { animationComplete($el);}}, stagger\n			);\n		break;\n		case 'zoomOut':\n		animate.to( \n			element, duration, {delay: delay, scale: \"0%\", opacity: 0, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n		break;\n		case 'tada':\n		animate.from(element, duration/6, {scale: 0.6,opacity:0}).to( \n			element, duration/6, {rotation: \"10%\", scale: 1.1, ease:easing, opacity: 1}\n			).to( \n			element, duration/6, {rotation: \"-10%\", scale: 1.15, ease:easing}\n			).to( \n			element, duration/6, {rotation: \"10%\", scale: 1.15, ease:easing}\n			).to( \n			element, duration/6, {rotation: \"-10%\", scale: 1.1, ease:easing}\n			).to( \n			element, duration/6, {rotation: \"0%\", scale: 1, ease:easing, onComplete: function() { animationComplete($el);}}\n			);\n			break;\n			case 'shake':\n			duration=duration/2;\n			animate.to( element, duration/2, {x: (nudge/2), ease:easing})\n			.to(element, duration/2, {x: \"-=\" + nudge, ease:easing, repeat:1})\n			.to(element, duration/2, {x: \"+=\" + nudge, ease:easing, repeat:1})\n			.to( element, duration/2, {x: \"0\", ease:easing, onComplete: function() { animationComplete($el);}});\n			break;\n		/**************************\n		STAGGERED - for arrays of \n		elements to be animated \n		sequentially\n		**************************/\n		case 'stagger.slideInLeft':\n		animate.staggerFrom( \n			element, duration, {delay: delay, left: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInLeftBig':\n		animate.staggerFromTo( \n			element, duration, {left: \"-=\" + bigPx + \"px\", opacity: 0}, {delay: delay, left: \"0px\", opacity: 1, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutLeft':\n		animate.staggerTo( \n			element, duration, {delay: delay, left: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutLeftBig':\n		animate.staggerTo( \n			element, duration, {delay: delay, left: \"-\" + bigPx + \"px\", opacity: 0, ease:easing}, {left: \"0\", opacity: 1}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInRight':\n		animate.staggerFrom( \n			element, duration, {delay: delay, left: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInRightBig':\n		animate.staggerFrom( \n			element, duration, {delay: delay, left: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutRight':\n		animate.staggerTo( \n			element, duration, {delay: delay, left: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutRightBig':\n		animate.staggerTo( \n			element, duration, {delay: delay, left: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInUp':\n		animate.staggerFrom( \n			element, duration, {delay: delay, top: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInUpBig':\n		animate.staggerFrom( \n			element, duration, {delay: delay, top: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutUp':\n		animate.staggerTo( \n			element, duration, {delay: delay, top: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutUpBig':		\n		animate.staggerTo( \n			element, duration, {delay: delay, top: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInDown':		\n		animate.staggerFrom( \n			element, duration, {delay: delay, top: \"-=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideInDownBig':\n		animate.staggerFrom( \n			element, duration, {delay: delay, top: \"-=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutDown':\n		animate.staggerTo( \n			element, duration, {delay: delay, top: \"+=\" + smallPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.slideOutDownBig':\n		animate.staggerTo( \n			element, duration, {delay: delay, top: \"+=\" + bigPx + \"px\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.zoomIn':\n		console.log(delay);\n		animate.staggerFromTo( \n			element, duration, {delay: delay, scale: \"0\", opacity: 0, ease:easing}, {scale: \"1\", opacity: 1}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.zoomOut':\n		animate.staggerTo( \n			element, duration, {delay: delay, scale: \"0%\", opacity: 0, ease:easing}, stagger\n			);\n		checkProgress($el, element);\n		break;\n		case 'stagger.tada':\n		element.each(function(index,element){\n			// This effectively allows the user to set a \n			// stagger time for sequences with multiple tweens\n			setTimeout(function() {\n				animate.to( element, duration/5, {scale: 0.6})\n				.to( \n					element, duration/5, {rotation: \"-10%\", scale: 1, ease:easing}\n					).to( \n					element, duration/5, {rotation: \"10%\", ease:easing}\n					).to( \n					element, duration/5, {rotation: \"-10%\", scale: 1, ease:easing}\n					).to( \n					element, duration/5, {rotation: \"10%\", ease:easing}\n					).to( \n					element, duration/5, {rotation: \"0%\", ease:easing});\n				}, (index*stagger*1000)+delay*1000);\n		});\n		checkProgress($el, element);\n		break;\n		case 'stagger.shake':\n		element.each(function(index,element){\n			setTimeout(function() {\n				animate.to( element, duration/6, {left: (nudge/2), opacity: 1, ease:easing})\n				.to(element, duration/6, {left: \"-=\" + nudge, ease:easing})\n				.to(element, duration/6, {left: \"+=\" + nudge, ease:easing})\n				.to(element, duration/6, {left: \"-=\" + nudge, ease:easing})\n				.to(element, duration/6, {left: \"+=\" + nudge, ease:easing})\n				.to( element, duration/6, {left: \"0\", ease:easing});\n			}, (index*stagger*1000)+delay*1000);\n		});\n		checkProgress($el, element);\n		break;\n		default:\n		console.log('The command ' + method + ' is not valid. Please refer to the documentation for accepted methods.');\n		break;\n	}\n}\nfunction customParams(options) {\n	duration = defaultDuration; \n	delay = defaultDelay;\n	easing = defaultEasing;\n	stagger = defaultStagger;\n	if(typeof(options.delay) !== \"undefined\") { delay = options.delay; console.log(delay); }\n	if(typeof(options.duration) !== \"undefined\") { duration = options.duration; }\n	if(typeof(options.easing) !== \"undefined\") { easing = options.easing; }\n	if(typeof(options.stagger) !== \"undefined\") { stagger = options.stagger; }\n}\n};\n",
+			"file": "gsui.js",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 12059,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"\">\n<head>\n	<meta charset=\"utf-8\">\n	<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n	<title>GSAP Transition Pack</title>\n	<!-- Bootstrap CSS -->\n	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n		<!--[if lt IE 9]>\n			<script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n			<script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n			<![endif]-->\n			<style type=\"text/css\" media=\"screen\">\n				body {\n					background-color: #1E1E20;\n				}\n				.ani-text {\n					color: #ffffff;\n					font-family: Arial, sans-serif;\n					font-size:40px;\n					position: relative;\n					display: inline-block;\n					float:left;\n					width: 20%;\n					text-align: center;\n					text-align: center;\n					box-sizing: border-box;\n					transition: color 1s;\n				}\n				.center {\n					position: absolute;\n					top: 40%;\n					text-align: center;\n					width: 100%;\n					transform: translateY(-50%);\n				}\n				.timer {\n					background-color: black;\n					padding: 1em;\n					font-size: 20px;\n					color: white;\n				}\n			</style>\n		</head>\n		<body>\n			<div class=\"center\">\n				<h1 class=\"ani-text\">GSAP</h1>\n				<h1 class=\"ani-text\">UI</h1>\n				<h1 class=\"ani-text\">PACK</h1>\n				<h1 class=\"ani-text\">JS</h1>\n				<h1 class=\"ani-text\">LIB</h1>\n			</div>\n			<!-- jQuery -->\n			<script src=\"//code.jquery.com/jquery.js\"></script>\n			<!-- Bootstrap JavaScript -->\n			<script src=\"http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\n			<script src=\"gsui.js\"></script>\n			<script type=\"text/javascript\" charset=\"utf-8\">\n				$(document).ready(function() {\n					gsui('zoomIn', $('.ani-text'), {repeat:2});\n					gsui('slideInLeftBig', $('.ani-text'));\n					gsui('zoomIn', $('.ani-text'),{duration:0.2, delay:0.5, repeat: 4});\n					gsui('stagger.tada', $('.ani-text'));\n					gsui('zoomOut', $('.ani-text'));\n					gsui('slideInLeft', $('.ani-text'));\n					gsui('stagger.shake', $('.ani-text'), {delay: 3}, function() {$('.ani-text').css('color','blue');});\n				});\n			</script>\n		</body>\n		</html>",
+			"file": "index.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 2278,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"git",
+				"GitHub: History"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"trim",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"doc",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"css",
+				"Run CSScomb"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-cdn-js"
+			],
+			[
+				"snippet",
+				"Snippet: bs3-carousel"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"trimm",
+				"Trimmer: Trim trailing whitespace."
+			],
+			[
+				"trimmer",
+				"Trimmer: Collapse empty lines."
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"set java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snipp",
+				"Snippet: :placeholder"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"instlal",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"reint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"mini",
+				"Minify::Minify File"
+			],
+			[
+				"min",
+				"Minify::Minify File"
+			],
+			[
+				"bea",
+				"SassBeautify"
+			],
+			[
+				"au",
+				"Autoprefix CSS"
+			],
+			[
+				"java",
+				"Javascript Beautify"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Run CSScomb JS"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"sass",
+				"SassBeautify: Convert from SASS to current type"
+			],
+			[
+				"lips",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"tid",
+				"Tidy CSS"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"mi",
+				"Minify::Minify File"
+			],
+			[
+				"m",
+				"Minify::Default File Settings"
+			],
+			[
+				"a",
+				"Autoprefix CSS"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"npm install uglify-js -g",
+			"clear",
+			"hide",
+			"node -v",
+			"node-v",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Alex/gsap-ui-pack"
+	],
+	"file_history":
+	[
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/Users/Alex/Documents/Projects/Websites/Projects/gsap/uipack/min/gsap-uipack-ck.js",
+		"/Users/Alex/Documents/Projects/Websites/Projects/gsap/uipack/velocity.js",
+		"/Users/Alex/Desktop/gemalto-scripts.js",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Alex/Documents/Projects/Websites/Projects/VelocityMobile/velocity-logo-white-left.png",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wp-content/themes/foundation-atomlab/library/css/style.css",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wp-content/themes/foundation-atomlab/library/js/scripts.js",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wp-content/themes/foundation-atomlab/library/scss/breakpoints/home.html",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wp-content/themes/foundation-atomlab/style.css",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wp-content/themes/foundation-atomlab/library/scss/partials/_grid.scss",
+		"/Users/Alex/Documents/Projects/Websites/GdGr/wordpress/wp-content/themes/foundation-atomlab/library/scss/partials/_typography.scss",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/system/expressionengine/templates/default_site/index-local.group/angular.html",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/aes.js",
+		"/Users/Alex/Downloads/CryptoJS v3.1.2/components/aes-min.js",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/style.css",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/scss/_base.scss",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/csslocal/css/style.css",
+		"/Users/Alex/Desktop/svg-polys-2.svg",
+		"/Users/Alex/Desktop/svg-polys-2.html",
+		"/Users/Alex/Documents/Projects/Websites/Konas/style/scss/style.scss",
+		"/Users/Alex/Documents/Projects/Websites/Konas/system/expressionengine/templates/index.group/index.html",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/sftp-config.json",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/system/expressionengine/templates/default_site/index.group/index.html",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/system/expressionengine/templates/default_site/index.group/header.html",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/system/expressionengine/templates/default_site/js.group/scripts.js",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/system/expressionengine/templates/default_site/index.group/footer.html",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/scss/_768up.scss",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-config.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/index.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/scss/partials/_mixins.scss",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/scss/breakpoints/_768up.scss",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/scss/breakpoints/_1030up.scss",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/js/scripts.js",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/header.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/page-custom.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/scss/partials/_grid.scss",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/footer.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/woocommerce.php",
+		"/Users/Alex/Documents/Projects/Websites/Projects/Atkinson/wordpress/wp-content/themes/atkinson-atomlab/library/scss/breakpoints/_base.scss",
+		"/Users/Alex/Documents/Projects/Websites/fluidlocal/wp-config.php",
+		"/Users/Alex/Desktop/test6.txt",
+		"/Users/Alex/Desktop/test5.txt",
+		"/Users/Alex/Desktop/add.asc",
+		"/Users/Alex/Desktop/test4.txt",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/SASS_Play/scss/_2x.scss",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/SASS_Play/scss/_768up.scss",
+		"/Users/Alex/Documents/Projects/Websites/AtomLD/css/SASS to mess with/scss/_base.scss",
+		"/Volumes/Atom Lab/index.group/footer.html",
+		"/Volumes/Atom Lab/js.group/jq.form.min.js",
+		"/Volumes/Atom Lab/js.group/scripts.js",
+		"/Volumes/Atom Lab/index.group/index.html",
+		"/Volumes/Atom Lab/index.group/header.html",
+		"/Volumes/Atom Lab/js.group/nivo-lightbox.min.js",
+		"/Volumes/Atom Lab/js.group/jq.form-validator.min.js",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/CSScomb JS/README.md",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/CombineAndMinfiy/readme.txt",
+		"/Volumes/Atom Lab/js.group/jpreloader.min.js",
+		"/Volumes/Atom Lab/js.group/head.min.js",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/_1920up.scss",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/style.scss",
+		"/Volumes/Atom Lab/js.group/jquery.loadie.min.js",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/_grid.scss",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/style.css",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/_768up.scss",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/_mixins.scss",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/_base.scss",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/css/scss/atomlab.sql",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/system/expressionengine/templates/index.group/footer.html",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/system/expressionengine/templates/index.group/index.html",
+		"/Users/Alex/Documents/Projects/Websites/OrbLab/system/expressionengine/templates/index.group/header.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/config/database.php",
+		"/Users/Alex/Desktop/ZenZap resources/website/css/scss/animate.css",
+		"/Volumes/ftp.gdgr.co.uk/index.group/index.html",
+		"/Volumes/ftp.gdgr.co.uk/index.group/header.html",
+		"/Users/Alex/Desktop/ZenZap resources/website/css/scss/_grid.scss",
+		"/index.group",
+		"/js.group",
+		"/Users/Alex/Downloads/mod.super_search.php",
+		"/Users/Alex/Desktop/scss/_base.scss",
+		"/Users/Alex/Desktop/scss/_768up.scss",
+		"/Users/Alex/Desktop/scss/_mixins.scss",
+		"/Volumes/eventon.co.uk/Javascript/scripts.js",
+		"/Volumes/eventon.co.uk/Pages/events.php",
+		"/Volumes/eventon.co.uk/Snippets /universal_head.php",
+		"/Volumes/eventon.co.uk/Snippets /header.php",
+		"/Volumes/eventon.co.uk/Index/index.php",
+		"/Volumes/eventon.co.uk/Snippets /search_form.php",
+		"/Volumes/eventon.co.uk/Snippets /return_results.php",
+		"/Volumes/eventon.co.uk/search/results.php",
+		"/Volumes/eventon.co.uk/Snippets /return_mobile_results.php",
+		"/Volumes/eventon.co.uk/Snippets /search_form_mobile.php",
+		"/Volumes/eventon.co.uk/Snippets /search_head.php",
+		"/Volumes/eventon.co.uk/search/justmobileresults.php",
+		"/Volumes/eventon.co.uk/search/search.php",
+		"/Volumes/eventon.co.uk/Index/header.php",
+		"/Users/Alex/Desktop/scss/_1030up.scss",
+		"/Users/Alex/Documents/event_scripts.php",
+		"/Volumes/eventon.co.uk/Snippets /event_scripts.php",
+		"/Volumes/eventon.co.uk/Snippets /search_form",
+		"/Volumes/eventon.co.uk/search/search_header.php",
+		"/Volumes/eventon.co.uk/Index/eventsheader.php",
+		"/Volumes/eventon.co.uk/Snippets /event_ui_resources.php",
+		"/Volumes/eventon.co.uk/Snippets /jq_ui.php",
+		"/Users/Alex/Desktop/scss/config.rb",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/Volumes/eventon.co.uk/Pages/results.php",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/CSS.group/config.rb",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/ftpsync.settings",
+		"/Volumes/ftp.gdgr.co.uk/system/expressionengine/templates/default_site/footer.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/CSS.group/style.css",
+		"/Users/Alex/Library/Application Support/Sublime Text 3/Packages/FTPSync/FTPSync.sublime-settings",
+		"/Users/Alex/Library/Preferences/com.supercrazyawesome.Mountee.plist",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Javascript.group/scripts.js",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Pages.group/events.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Pages.group/search.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Pages.group/results.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/CSS.group/default.css",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Index.group/footer.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Index.group/index.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Javascript.group/gmap.js",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Pages.group/login.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Index.group/.htaccess",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/CSS.group/index.html",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/CSS.group/scss/_grid.scss",
+		"/Users/Alex/Documents/Projects/Websites/ee/system/expressionengine/templates/default_site/Index.group/login.html"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"scripts.js",
+			"_base.scss",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tada",
+			"stagger.",
+			", {delay:0.5}",
+			"tada",
+			"slideinleftbig",
+			"fromto",
+			"slideinleftbig",
+			"inleftbig",
+			"zoomin",
+			"onComplete: animationComplete($el)",
+			"onComplete: function(){ $el.removeClass('gsui-active'); ",
+			"'animating'",
+			"{stagger: 1}",
+			", onComplete: function(){ $el.removeClass('animating'); }}, stagger",
+			"zoomOut",
+			"zoomout",
+			"		$el.removeClass('animating');\n",
+			"\n				",
+			"shake",
+			"jq",
+			"box",
+			"opacity",
+			"<input type=\"hidden\" name=\"testcookie\" value=\"1\" />",
+			"js",
+			"VelocityIcons",
+			"content",
+			"staticBottom",
+			"tiny",
+			"jquery",
+			"div",
+			"wrap",
+			"$boxheaders",
+			"$boxHeaders",
+			"invisibletop",
+			"more",
+			"invis",
+			"staticbottom",
+			"wp-conten",
+			"scroll",
+			"footer",
+			"body",
+			"ks-demo/",
+			"logo",
+			"atomlab.co.uk",
+			"section:nth-child",
+			" html#facebook body.plugin div._li div.pluginSkinLight div div.clearfix div._8u table.uiGrid tbody tr._51mx td._51m- span.fsl a",
+			"section",
+			"\"soleil\"",
+			"slide",
+			"id(",
+			"id",
+			"project",
+			"lineout",
+			"li",
+			"light",
+			"header span",
+			"header",
+			".info",
+			"0.8em !important",
+			".tag",
+			"info",
+			"proje",
+			"info",
+			"box_c",
+			"scroll",
+			"info",
+			"box_co",
+			"project",
+			"portfo",
+			"article",
+			"rgba(255,255,255,0.5)",
+			"menu",
+			"header_height",
+			"header",
+			"index",
+			"footer",
+			"atomslider",
+			"slide",
+			"myTimer",
+			"nav",
+			"a {",
+			"phone",
+			"sub-menu",
+			"logo",
+			"pink",
+			"img",
+			"letter-spacing:",
+			"\"freight-sans-pro\"",
+			"body",
+			"font-size: 1em",
+			"\"museo-sans\"",
+			"art",
+			"button",
+			"art",
+			".css",
+			"rotateX",
+			"rotateY",
+			"transition",
+			".feature",
+			"header",
+			"slideup",
+			"atomlab.co.uk",
+			"paused =",
+			"paused",
+			"section",
+			"#first_slide",
+			"section",
+			"height: 100% !important",
+			"100% !important",
+			"splash",
+			"* {",
+			"jpre",
+			"process",
+			"extras",
+			"contact",
+			"menu",
+			"album_art",
+			".message",
+			"referral",
+			".referral",
+			"site_name",
+			"header",
+			"spin",
+			"contact",
+			"p {",
+			"p",
+			"section",
+			"header_height"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"wp-content",
+			"",
+			"ksdental.co.uk",
+			"\"effra\"",
+			"rgba(255,255,255,0.3)",
+			"index-local",
+			"atomSlider",
+			"\"rooney-sans\"",
+			"font-size: 1.2em",
+			"\"freight-sans-pro\"",
+			"localhost:8888/AtomLD",
+			".message",
+			"Launch date:",
+			"http://atomlab.co.uk",
+			"ease",
+			"em/3",
+			"0.625em",
+			"-0.625em",
+			"-0.5em",
+			"18.125em",
+			"16.875em",
+			"top: 5.625em",
+			"5.625em",
+			"5.313em",
+			"1.25em",
+			"left: 4.375em",
+			"0.5em",
+			"2.313em",
+			"",
+			"5.625em",
+			"4.375em",
+			"5.313em",
+			"4.375em",
+			"0.5em",
+			"2.313em",
+			"1.250em",
+			"",
+			"0,.2,0,1",
+			"0.5s",
+			"Resume slideshow",
+			".attr('title', ",
+			"$multiplier",
+			"http://atomlab.co.uk",
+			"padding-top: 8em;",
+			"background-attachment: scroll",
+			"1s",
+			"wTop",
+			"rgba(0,0,0,0.1)",
+			"0.8s",
+			"&amp;",
+			"",
+			"style-two",
+			"http",
+			"fourcol box clearfix",
+			"",
+			"-300px",
+			"translateY(-200px",
+			"fadeinOutDown",
+			"https",
+			"align",
+			"aimg2",
+			"http://www.fluidity.co",
+			"radius: 1.5em;",
+			"ease",
+			"menu-item"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gsui.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								743,
+								743
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4409.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								999,
+								999
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 92.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"project": "gsap-uipack.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
