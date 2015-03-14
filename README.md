@@ -1,5 +1,7 @@
 # **GSAP UI pack** #
 
+I'll be updating this very shortly--it wasn't ready for release when I initially comitted it, but I don't have premium so it had to be public. I'll be updating this quite soon, with vastly enhanced functionality and rather extensive documentation. I really would like this to help others the way it has me.
+
 ### What is this repository for? ###
 
 * Ever used Velocity.js? Love its UI capabilities? This is an attempt to replicate those quick transitions and shortcuts for the considerably faster GSAP. Also GSAP is backwards compatible to IE6.
