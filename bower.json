@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "gsap": "latest"
+    "gsap": ">=1.10.0"
   }
 }
