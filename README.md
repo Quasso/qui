@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # **GSAP UI pack** #
 
 I'll be updating this very shortly--it wasn't ready for release when I initially comitted it, but I don't have premium so it had to be public. I'll be updating this quite soon, with vastly enhanced functionality and rather extensive documentation. I really would like this to help others the way it has me.
@@ -23,3 +24,27 @@ So, it's piqued your interest? Here are a series of useful points of information
 * Ideas for improving performance
 
 If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I will periodically update it though as I enhance the script and discover bugs. I hope it helps somebody else!
+=======
+# **GSAP UI pack** #
+
+I'll be updating this very shortly--it wasn't ready for release when I initially comitted it, but I don't have premium so it had to be public. I'll be updating this quite soon, with vastly enhanced functionality and rather extensive documentation. I really would like this to help others the way it has me.
+
+### What is this repository for? ###
+
+* Ever used Velocity.js? Love its UI capabilities? This is an attempt to replicate those quick transitions and shortcuts for the considerably faster GSAP. Also GSAP is backwards compatible to IE6.
+* 1.0a
+
+### How do I get set up? ###
+
+* Include the script after you've included GSAP
+* Call gsui('transition.transitionName', $el, {options [optional]});
+* For more details on the available transitions, option & to see working examples, see below.
+
+### Contribution guidelines ###
+
+* Any ideas for presets
+* Any ideas for features
+* Ideas for improving performance
+
+If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I will periodically update it though as I enhance the script and discover bugs. I hope it helps somebody else!
+>>>>>>> 7ee725db844a08a23624aa882b59f0f55cea4e66
