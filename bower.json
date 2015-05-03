@@ -1,17 +1,27 @@
 {
-    "name": "gsui",
-    "version": "1.0.0",
-    "main": "./dist/gsui.js",
-    "description": "Front-end animation UI pack using GSAP.",
-    "ignore": [
-        ".jshintrc",
-        "**/*.txt"
-    ],
-     "dependencies": {
-        "gsap": "latest"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/Quasso/gsui"
-    }
+  "name": "gsui",
+  "main": "dist/gsui.min.js",
+  "version": "1.0.0",
+  "homepage": "http://github.com/Quasso/",
+  "author": {
+    "name": "gdgr - Alex Goodger",
+    "email": "alex@gdgr.co.uk"
+  },
+  "description": "Front-end animation UI pack using GSAP.",
+  "keywords": [
+    "GSAP",
+    "gsui",
+    "animation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gsap": "latest"
+  }
 }
