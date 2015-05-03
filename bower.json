@@ -1,18 +1,17 @@
 {
-  "name": "gsui",
-  "version": "1.0.0",
-  "main": "./dist/gsui.js",
-  "description": "Front-end animation UI pack using GSAP.",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Quasso/gsui"
-  },
-  "dependencies": {
-    "gsap": "latest",
-  },
-  "ignore": [
-    "node_modules",
-    "components",
-    "lib"
-  ]
+    "name": "gsui",
+    "version": "1.0.0",
+    "main": "./dist/gsui.js",
+    "description": "Front-end animation UI pack using GSAP.",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+     "dependencies": {
+        "gsap": "latest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Quasso/gsui"
+    }
 }
