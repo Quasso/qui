@@ -27,9 +27,11 @@ Small demo here (inspect the source of example.js for an idea of what's happenin
 
 The syntax is like this:
 
-`gsui('myTransitionName', element, {options});`
+`gsui('transition', element, {options});`
 
-`myTransitionName` can have any of the following values (hopefully self-explanatory, but this will be expanded on): 
+##### transition #####
+
+This can have any of the following values (hopefully self-explanatory, but this will be expanded on): 
 
 shrink
 grow
@@ -56,9 +58,13 @@ zoomOut
 tada
 shake
 
-`element` is the javascript element or array you'd like to animate.
+##### element ##### 
 
-`options` is an object contains key-value pairs, with the options being:
+This is the javascript element or array you'd like to animate.
+
+##### options #####
+ 
+This is an object which contains key-value pairs, with the options being:
 
 `delay` (decimal)
 
@@ -80,10 +86,11 @@ If you prepend `stagger.` to the above transitions, it allows you to use the sta
 
 This can be applied to any call. When set to `true`, GSUI will tweak the `visibility` property of the element, instead of the `display` property like it normally does. It's useful if you want to set `visibility: hidden` on an element so as to keep the structure of the page the same size, for big block elements.
 
-`toHeight` (px/%/em)
+`toHeight`
 
 This is a special property that is used with `grow` and `shrink` to determine the final height after either is called. 
 
+I touched on it just then, but depending on the type of transition you're doing (in/out), GSUI will automatically adjust the display property of the element(s), and if you apply `vis: true` in the options, it'll adjust the visibility property.
 
 ### Contribution guidelines ###
 
