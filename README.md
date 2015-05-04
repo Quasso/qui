@@ -15,7 +15,7 @@ This is an alpha release. I first started making this project several months ago
 `bower install gsui (--save-dev)`
 
 * Include the script after you've included GSAP
-* Call gsui('transition.transitionName', $el, {options [optional]});
+* Call `gsui('transition.transitionName', element, {options [optional]});`, for example `gsui('slideInUp', modal, {delay: 2});`
 * For more details on the available transitions, option & to see working examples, see below.
 
 ### Documentation ###
