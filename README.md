@@ -4,6 +4,8 @@ The aim of this project is to provide front-end devs with a painless, decluttere
 
 This is an alpha release. I first started making this project several months ago and have incrementally improved it while using it in production projects, though it definitely needs refining. 
 
+Small demo here (inspect the source of example.js for an idea of what's happening): http://quasso.github.io/gsui
+
 ### Why should I use GSAP, and importantly why should I use this too? ###
 
 * GSAP is a wonderful library, with class A support and an unwieldy appetite for performance. It's backwards compatible to IE6, it vastly outperforms CSS animations and outperforms all other JS animation libraries. If you're using a lot of resources and scripting on your web projects and require animation, GSAP is the best way to add as little as possible to that stress and get fluid, responsive animations.
