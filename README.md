@@ -12,6 +12,7 @@ This is an alpha release. I first started making this project several months ago
 
 ## Bower ##
 
+bower install gsui (--save-dev)
 
 * Include the script after you've included GSAP
 * Call gsui('transition.transitionName', $el, {options [optional]});
@@ -25,6 +26,6 @@ So, it's piqued your interest? Here are a series of useful points of information
 
 * Any ideas for presets
 * Any ideas for features
-* Ideas for improving performance
+* Ideas for improving performance, or reducing size
 
 If you have any suggestions, issues or anything else feel free to file something. I can't dedicate buckets of time to this--I'm just creating it to speed my workflow and thought I'd share the love in case anyone else can make good use of it. I will periodically update it though as I enhance the script and discover bugs. I hope it helps somebody else!
