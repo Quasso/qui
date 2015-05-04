@@ -12,7 +12,7 @@ This is an alpha release. I first started making this project several months ago
 
 ## Bower ##
 
-bower install gsui (--save-dev)
+`bower install gsui (--save-dev)`
 
 * Include the script after you've included GSAP
 * Call gsui('transition.transitionName', $el, {options [optional]});
