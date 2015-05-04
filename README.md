@@ -20,7 +20,7 @@ This is an alpha release. I first started making this project several months ago
 
 ### Documentation ###
 
-So, it's piqued your interest? Here are a series of useful points of information about the parameters GSUI can take and I'll explore some other aspects about what it's capable of, what it isn't yet capable of etcetera.
+Coming very soon!
 
 ### Contribution guidelines ###
 
