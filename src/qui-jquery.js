@@ -14,7 +14,7 @@ vis = defaultVis = false,
 count = defaultCount = 0, done=false, isArray = false, toHeight="100%";
 
 var lastEl;
-var gsui = function(method, element, options, callback) {
+var qui = function(method, element, options, callback) {
 	// console.log($(element));
 	// This simple class adding/removing system allows animations to be chained
 	// on $(element)s/groups of $(element)s very easily without the need for manually
@@ -23,22 +23,22 @@ var gsui = function(method, element, options, callback) {
 	// first finished if the second has a delay, it will honour that delay 
 	// after the first $(element) has finished too
 	// console.log('El length: ' + $(element).length);
-	// console.log(typeof document.querySelector('.gsui-active')===null);
+	// console.log(typeof document.querySelector('.qui-active')===null);
 	if(element.toString().indexOf('$')!=-1) {
 		console.log('innit');
 		element = element[0];
 	}
-	if (typeof document.querySelector('.gsui-active')===null) {
+	if (typeof document.querySelector('.qui-active')===null) {
 		// console.log('queued');
 		if ($(element) == '[object NodeList]' || Object.prototype.toString.call( $(element) ) === '[object Array]') {
 			for(i=0; i<$(element).length;i++) {
-				if ($(element[i]).hasClass('gsui-active')) {
-					setTimeout(function() {gsui(method, $(element), options, callback)},100);
+				if ($(element[i]).hasClass('qui-active')) {
+					setTimeout(function() {qui(method, $(element), options, callback)},100);
 				}
 			}
 		}
-		else if ($(element).hasClass('gsui-active'))
-			setTimeout(function() {gsui(method, $(element), options, callback)},100);
+		else if ($(element).hasClass('qui-active'))
+			setTimeout(function() {qui(method, $(element), options, callback)},100);
 	}
 
 	else {
@@ -48,12 +48,12 @@ var gsui = function(method, element, options, callback) {
 			isArray = true;
 			$(element) = Array.prototype.slice.call($(element));
 			$(element).each(function(index){
-				$(element).addClass('gsui-active');
+				$(element).addClass('qui-active');
 			});
 		}
 		else {
 			isArray = false;
-			$(element).addClass('gsui-active');
+			$(element).addClass('qui-active');
 		}
 		
 		var 
@@ -420,7 +420,7 @@ function animationComplete(element, type) {
 	
 	if($(element).length>0) {
 		$(element).each(function(index){
-			$(element).removeClass('gsui-active');
+			$(element).removeClass('qui-active');
 			// console.log(vis);
 			if(type.indexOf('Out')>0 && vis===false) {
 				$(element).css.display='none';
@@ -433,7 +433,7 @@ function animationComplete(element, type) {
 	}
 	else {
 		// console.log(vis);
-		$(element).removeClass('gsui-active');
+		$(element).removeClass('qui-active');
 		if(type.indexOf('Out')>0 && vis===false) {
 			$(element).css.display='none';
 		}
@@ -453,13 +453,13 @@ function checkProgress(element) {
 	if($(element).length>0) {
 		$(element).each(function(index){
 			setTimeout(function() {
-				$(element).removeClass('gsui-active');
+				$(element).removeClass('qui-active');
 			}, $(element).length*(duration+stagger+delay*1000)+1);
 		});
 	}
 	else {
 		setTimeout(function() {
-			$(element).removeClass('gsui-active');
+			$(element).removeClass('qui-active');
 		}, $(element).length*(duration+stagger+delay*1000)+1);
 	}
 	
