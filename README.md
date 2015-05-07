@@ -4,21 +4,21 @@ The aim of this project is to provide front-end devs with a painless, decluttere
 
 This is an alpha release. I first started making this project several months ago and have incrementally improved it while using it in production projects, though it definitely needs refining. 
 
-Small demo here (inspect the source of example.js for an idea of what's happening): http://quasso.github.io/gsui
+Small demo here (inspect the source of example.js for an idea of what's happening): http://quasso.github.io/qui
 
 ### Why should I use GSAP, and importantly why should I use this too? ###
 
 * GSAP is a wonderful library, with class A support and an unwieldy appetite for performance. It's backwards compatible to IE6, it vastly outperforms CSS animations and outperforms all other JS animation libraries. If you're using a lot of resources and scripting on your web projects and require animation, GSAP is the best way to add as little as possible to that stress and get fluid, responsive animations.
-* GSUI is designed to let front-end devs like me perform common UI transitions with little effort and minimal code. It should work as a catalyst in your projects. 
+* QUI is designed to let front-end devs like me perform common UI transitions with little effort and minimal code. It should work as a catalyst in your projects. 
 
 ### How do I get set up? ###
 
 ## Bower ##
 
-`bower install gsui (--save-dev)`
+`bower install qui (--save-dev)`
 
 * Include the script after you've included GSAP
-* Call gsui in your code (see below)
+* Call qui in your code (see below)
 * For more details on the available transitions, option & to see working examples (see below)
 
 ### Documentation ###
@@ -27,7 +27,7 @@ Small demo here (inspect the source of example.js for an idea of what's happenin
 
 The syntax is like this:
 
-`gsui('transition', element, {options});`
+`qui('transition', element, {options});`
 
 ##### transition #####
 
@@ -88,13 +88,13 @@ If you prepend `stagger.` to the above transitions, it allows you to use the sta
 
 `vis` (boolean)
 
-This can be applied to any call. When set to `true`, GSUI will tweak the `visibility` property of the element, instead of the `display` property like it normally does. It's useful if you want to set `visibility: hidden` on an element so as to keep the structure of the page the same size, for big block elements.
+This can be applied to any call. When set to `true`, qui will tweak the `visibility` property of the element, instead of the `display` property like it normally does. It's useful if you want to set `visibility: hidden` on an element so as to keep the structure of the page the same size, for big block elements.
 
 `toHeight`
 
 This is a special property that is used with `grow` and `shrink` to determine the final height after either is called. 
 
-I touched on it just then, but depending on the type of transition you're doing (in/out), GSUI will automatically adjust the display property of the element(s), and if you apply `vis: true` in the options, it'll adjust the visibility property.
+I touched on it just then, but depending on the type of transition you're doing (in/out), qui will automatically adjust the display property of the element(s), and if you apply `vis: true` in the options, it'll adjust the visibility property.
 
 ### Contribution guidelines ###
 
