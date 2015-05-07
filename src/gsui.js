@@ -18,30 +18,30 @@ var
     toHeight = "100%";
 
 var lastEl;
-var qui = function(method, element, options, callback) {
+var gsui = function(method, element, options, callback) {
     // This simple class adding/removing system allows animations to be chained
     // on elements/groups of elements very easily without the need for manually
     // calculating a delay. It also means the delay parameter always functions as 
     // expected, if you chain ui animations on an element, it'll only start when the 
     // first finished if the second has a delay, it will honour that delay 
     // after the first element has finished too
-    /* First check if there's an element currently being animated by qui anywhere on the page */
-    if (typeof document.querySelector('.qui-active') === null) {
+    /* First check if there's an element currently being animated by GSUI anywhere on the page */
+    if (typeof document.querySelector('.gsui-active') === null) {
         // There is something being animated, let's look at the current call and the element(s) in question
         if (element == '[object NodeList]' || Object.prototype.toString.call(element) === '[object Array]') {
-            // qui's been passed an array of elements, iterate them and check whether any are being animated
+            // GSUI's been passed an array of elements, iterate them and check whether any are being animated
             for (i = 0; i < element.length; i++) {
-                if (element[i].classList.contains('qui-active')) {
+                if (element[i].classList.contains('gsui-active')) {
                     // If they are, go recursive on this and the first time it's called when all the elements have stopped animating, run
                     setTimeout(function() {
-                        qui(method, element, options, callback)
+                        gsui(method, element, options, callback)
                     }, 100);
                 }
             }
-        } else if (element.classList.contains('qui-active'))
-        // qui's been passed a singular element, check whether it's animated now, or do as in previous comment
+        } else if (element.classList.contains('gsui-active'))
+        // GSUI's been passed a singular element, check whether it's animated now, or do as in previous comment
             setTimeout(function() {
-            qui(method, element, options, callback)
+            gsui(method, element, options, callback)
         }, 100);
     } else {
         lastEL = element;
@@ -49,11 +49,11 @@ var qui = function(method, element, options, callback) {
             isArray = true;
             element = Array.prototype.slice.call(element);
             element.forEach(function(element, index) {
-                element.classList.add('qui-active');
+                element.classList.add('gsui-active');
             });
         } else {
             isArray = false;
-            element.classList.add('qui-active');
+            element.classList.add('gsui-active');
         }
 
         var
@@ -835,7 +835,7 @@ var qui = function(method, element, options, callback) {
 
         if (element.length > 0) {
             element.forEach(function(element, index) {
-                element.classList.remove('qui-active');
+                element.classList.remove('gsui-active');
                 // console.log(vis);
                 if (type.indexOf('Out') > 0 && vis === false) {
                     element.style.display = 'none';
@@ -847,7 +847,7 @@ var qui = function(method, element, options, callback) {
             });
         } else {
             // console.log(vis);
-            element.classList.remove('qui-active');
+            element.classList.remove('gsui-active');
             if (type.indexOf('Out') > 0 && vis === false) {
                 element.style.display = 'none';
             }
@@ -867,12 +867,12 @@ var qui = function(method, element, options, callback) {
         if (element.length > 0) {
             element.forEach(function(element, index) {
                 setTimeout(function() {
-                    element.classList.remove('qui-active');
+                    element.classList.remove('gsui-active');
                 }, element.length * (duration + stagger + delay * 1000) + 1);
             });
         } else {
             setTimeout(function() {
-                element.classList.remove('qui-active');
+                element.classList.remove('gsui-active');
             }, element.length * (duration + stagger + delay * 1000) + 1);
         }
 
