@@ -1,4 +1,10 @@
 config.codekit
+<<<<<<< HEAD
+gsap.sublime-project
+gsap.sublime-workplace
+=======
 gsap-uipack.sublime-project
 gsap-uipack.sublime-workplace
+index.html
+>>>>>>> 6f7af736a8118095e7829fdfd2bd545d44b150bf
 readme.html
