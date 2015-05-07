@@ -58,7 +58,11 @@ zoomOut
 tada
 shake
 
+<<<<<<< HEAD
 ##### element ##### 
+=======
+##### element #####
+>>>>>>> 6f7af736a8118095e7829fdfd2bd545d44b150bf
 
 This is the javascript element or array you'd like to animate.
 
