@@ -1,4 +1,4 @@
-# **GSAP UI pack** #
+# **QUI - a little GSAP UI pack** #
 
 The aim of this project is to provide front-end devs with a painless, decluttered way of handling common UI transitions in projects--I've found myself using it mainly with Skrollr.js, or things like notifications in web apps.
 
