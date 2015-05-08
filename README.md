@@ -13,13 +13,19 @@ Small demo here (inspect the source of example.js for an idea of what's happenin
 
 ### How do I get set up? ###
 
-## Bower ##
+First I'll just note that there's a VanillaJS version and a jQuery version, if you've already got jQuery running in your project you'll probably want to use that flavour--or if you're using Sizzle you would too. I tend to use `document.querySelector('el')` so I use the plain version. 
+
+#### Bower ####
 
 `bower install qui (--save-dev)`
 
-* Include the script after you've included GSAP
+* Include the script after you've included GSAP (it's a dependency so it'll also download to bower_components)
 * Call qui in your code (see below)
 * For more details on the available transitions, option & to see working examples (see below)
+
+#### Manual ####
+
+Download the file(s) under /dist, place in your project & link to the script after you've included GSAP.
 
 ### Documentation ###
 
