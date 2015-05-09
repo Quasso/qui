@@ -15,35 +15,35 @@ window.onload = function() {
                     switch (i) {
                         case 0:
                             if (direction === "down") {
-                                gsui('slideInDown', hA[i]);
-                                gsui('slideInUp', pA[i]);
+                                qui('slideInDown', hA[i]);
+                                qui('slideInUp', pA[i]);
                             } else {
-                                gsui('slideOutUp', hA[i], {
+                                qui('slideOutUp', hA[i], {
                                     vis: true
                                 });
-                                gsui('slideOutDown', pA[i], {
+                                qui('slideOutDown', pA[i], {
                                     vis: true
                                 });
                             }
                             break;
                         case 1:
                             if (direction === "down") {
-                                gsui('slideInLeft', hA[i]);
-                                gsui('slideInRight', pA[i]);
+                                qui('slideInLeft', hA[i]);
+                                qui('slideInRight', pA[i]);
                             } else {
-                                gsui('slideOutLeft', hA[i], {
+                                qui('slideOutLeft', hA[i], {
                                     vis: true
                                 });
-                                gsui('slideOutRight', pA[i], {
+                                qui('slideOutRight', pA[i], {
                                     vis: true
                                 });
                             }
                             break;
                         case 2:
                         if (direction === "down") {
-                                gsui('stagger.zoomIn', icons);
+                                qui('stagger.zoomIn', icons);
                             } else {
-                                gsui('stagger.zoomOut', icons, {
+                                qui('stagger.zoomOut', icons, {
                                     vis: true
                                 });
                                

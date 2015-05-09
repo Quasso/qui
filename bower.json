@@ -1,7 +1,7 @@
 {
-  "name": "gsui",
-  "main": "dist/gsui.min.js",
-  "version": "1.0.0",
+  "name": "qui",
+  "main": "dist/qui.min.js",
+  "version": "1.0.2",
   "homepage": "http://github.com/Quasso/",
   "author": {
     "name": "gdgr - Alex Goodger",
@@ -10,7 +10,7 @@
   "description": "Front-end animation UI pack using GSAP.",
   "keywords": [
     "GSAP",
-    "gsui",
+    "qui",
     "animation"
   ],
   "license": "MIT",
