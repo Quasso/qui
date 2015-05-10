@@ -33,7 +33,9 @@ Download the file(s) under /dist, place in your project & link to the script aft
 
 The syntax is like this:
 
-`qui('transition', element, {options});`
+`qui('transition', element, {options}, callback());`
+
+The only required parameters are `transition` and `element`.
 
 ##### transition #####
 
