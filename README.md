@@ -39,30 +39,30 @@ The syntax is like this:
 
 This can have any of the following values (hopefully self-explanatory, but this will be expanded on): 
 
-shrink
-grow
-fadeIn
-fadeOut
-slideInLeft
-slideInLeftBig
-slideOutLeft
-slideOutLeftBig
-slideInRight
-slideInRightBig
-slideOutRight
-slideOutRightBig
-slideInUp
-slideInUpBig
-slideOutUp
-slideOutUpBig
-slideInDown
-slideInDownBig
-slideOutDown
-slideOutDownBig
-zoomIn
-zoomOut
-tada
-shake
+`shrink`
+`grow`
+`fadeIn`
+`fadeOut`
+`slideInLeft`
+`slideInLeftBig`
+`slideOutLeft`
+`slideOutLeftBig`
+`slideInRight`
+`slideInRightBig`
+`slideOutRight`
+`slideOutRightBig`
+`slideInUp`
+`slideInUpBig`
+`slideOutUp`
+`slideOutUpBig`
+`slideInDown`
+`slideInDownBig`
+`slideOutDown`
+`slideOutDownBig`
+`zoomIn`
+`zoomOut`
+`tada`
+`shake`
 
 ##### element #####
 
