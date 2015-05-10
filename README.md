@@ -104,7 +104,7 @@ This is a special property that is used with `grow` and `shrink` to determine th
 
 Run-of-the-mill callback, do whatever you want! Useful for added flexibility, e.g. setting CSS properties that aren't available via `options`.
 
-I touched on it just then, but depending on the type of transition you're doing (in/out), qui will automatically adjust the display property of the element(s), and if you apply `vis: true` in the options, it'll adjust the visibility property.
+I touched on it just then, but depending on the type of transition you're doing (in/out), qui will automatically adjust the display property of the element(s).
 
 ### Contribution guidelines ###
 
