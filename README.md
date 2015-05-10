@@ -92,9 +92,17 @@ If you prepend `stagger.` to the above transitions, it allows you to use the sta
 
 This can be applied to any call. When set to `true`, qui will tweak the `visibility` property of the element, instead of the `display` property like it normally does. It's useful if you want to set `visibility: hidden` on an element so as to keep the structure of the page the same size, for big block elements.
 
+`inline` (boolean)
+
+This can be applied to any call. When set to `true`, qui will tweak the `display` property of the element to `inline-block` once an 'In' animation has completed.
+
 `toHeight`
 
 This is a special property that is used with `grow` and `shrink` to determine the final height after either is called. 
+
+##### callback #####
+
+Run-of-the-mill callback, do whatever you want! Useful for added flexibility, e.g. setting CSS properties that aren't available via `options`.
 
 I touched on it just then, but depending on the type of transition you're doing (in/out), qui will automatically adjust the display property of the element(s), and if you apply `vis: true` in the options, it'll adjust the visibility property.
 
