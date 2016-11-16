@@ -1,0 +1,19 @@
+{
+    "version": "2.0.7",
+    "compilerOptions": {
+        "module": "commonjs",
+        "sourceMap": true,
+        "target": "ES5",
+        "removeComments": false,
+        "types": [],
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "moduleResolution": "node",
+        "allowUnreachableCode": true
+    },
+
+    "exclude": [
+        "node_modules",
+        "src/vendor"
+    ]
+}
