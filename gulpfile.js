@@ -14,13 +14,12 @@ switch (process.env.MODE) {
         break;
 }
 
-// Pull through our environment config object
-var envVars = eval(require("typescript").transpile(require("fs").readFileSync("./gulp-env.ts").toString())); //require('./gulp-env.js');
+// Pull through environment config object
+var envVars = eval(require("typescript").transpile(require("fs").readFileSync("./gulp-env.ts").toString()));
 
 global.development = false;
 global.production = false;
 
-/* We don't use NODE_ENV for good reason: https://devcenter.heroku.com/articles/nodejs-support */
 switch (process.env.DEPLOY_MODE) {
     case 'development':
         console.log('development '.green.bold + 'envionment active'.green);
@@ -41,13 +40,12 @@ switch (process.env.DEPLOY_MODE) {
 
 global.globals = envVars.globals;
 
-global.helpers = eval(require("typescript").transpile(require("fs").readFileSync("./gulp-tasks/helpers.ts").toString()));
+global.helpers = eval(require("typescript").transpile(require("fs").readFileSync("./tasks/helpers.ts").toString()));
 
 const files = [
-    "./gulp-tasks/build.ts",
-    "./gulp-tasks/test.ts",
-    "./gulp-tasks/lint.ts",
-    "./gulp-tasks/watch.ts"
+    "./tasks/build.ts",
+    "./tasks/lint.ts",
+    "./tasks/watch.ts"
 ];
 
 files.forEach(function(file) {

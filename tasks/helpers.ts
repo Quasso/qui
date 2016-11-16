@@ -1,10 +1,8 @@
 declare var require, globals, env: any;
 
-const ngAnnotate = require('browserify-ngannotate');
-
 export const paths = {
   ts: ['src/**/*.ts', 'typings/globals/**/*.d.ts', 'typings-custom/*.d.ts'],
-  tslint: ['src/api/**/**.ts', 'gulp-tasks/*.ts', 'test/e2e/features/**/*.ts'],
+  tslint: ['src/**/**.ts', 'tasks/*.ts'],
   jsDest: globals.TEMP_DIR,
   working: './src/',
   nodeModules: 'node_modules',

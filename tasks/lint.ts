@@ -1,5 +1,7 @@
 import { Gulpclass, Task, SequenceTask } from "gulpclass/Decorators";
 
+declare var require, process: any;
+
 const scsslint = require('gulp-scss-lint');
 const sh = require("shelljs");
 const gutil = require('gulp-util');
@@ -15,7 +17,6 @@ export class Lint {
     }
     cb();
   }
-
 
   @SequenceTask('lint')
   lint() {

@@ -30,6 +30,17 @@ export class Gulpfile {
   prefix: clean
   ********************/
 
+  @Task('cleanBuild')
+  cleanBuild(cb: Function) {
+    del([helpers.paths.jsDest, helpers.paths.dist]).then(() => {
+      return mkdirp(helpers.paths.jsDest, function(err) {
+        if (err) console.error(err)
+        else {
+          cb();
+        }
+      });
+    })
+  }
 
   @Task("cleanNode")
   cleanNode() {
