@@ -58,23 +58,6 @@ export class Watch {
       port: defaultPort
     }));
   }
-  @Task()
-  compileE2ETypescript(cb: Function) {
-      console.log(helpers.paths.e2eTest);
-      const tsResult = gulp.src(helpers.paths.e2eTest).pipe((ts.createProject('./tsconfig.json'))());
-      // tsResult.dts.pipe(gulp.dest(helpers.paths.dtsDest));
-      // tsResult.js.pipe(gulp.dest(helpers.paths.jsDest));
-      return tsResult;
-    }
-    // $ gulp test:unit:watch
-  @SequenceTask('test:unit:watch')
-  unitTestWatch() {
-    return ['installTypings', "compileTemplates", "compileTypescript", 'utilityRegexReplace', 'watchChanges', 'watchUnitTest']
-  }
-  @Task('test:e2e:watch')
-  e2eTestWatch() {
-    gulp.watch(['./test/e2e/**/*', '!./test/e2e/features/hooks.ts'], ['lint:ts', 'compileE2ETypescript'])
-  }
 
   // $ gulp watch s
   @SequenceTask('watch')
